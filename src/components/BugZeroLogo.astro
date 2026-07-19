@@ -1,0 +1,19 @@
+---
+// Logo BugZero SVG (réutilisable)
+export interface Props {
+  class?: string;
+}
+
+const { class: className = "w-40 h-auto" } = Astro.props;
+---
+
+<svg viewBox="0 0 300 70" class={className} role="img" aria-label="BugZero" xmlns="http://www.w3.org/2000/svg">
+  <text x="0" y="53" fill="#0ba5dc" font-family="monospace" font-size="52" font-weight="bold">BUG</text>
+  <text x="112" y="53" fill="#c8d900" font-family="monospace" font-size="52" font-weight="bold">ZERO</text>
+  <rect x="258" y="12" width="22" height="39" fill="#c8d900"></rect>
+  <rect x="263" y="17" width="12" height="23" fill="white"></rect>
+  <rect x="265" y="22" width="3" height="4" fill="#0ba5dc"></rect>
+  <rect x="271" y="22" width="3" height="4" fill="#0ba5dc"></rect>
+  <path d="M266 32q3 3 6 0" fill="none" stroke="#0ba5dc" stroke-width="2"></path>
+  <path d="M267 55h5v5h-5zm7-5h5v5h-5zm5 5h5v5h-5z" fill="#0ba5dc"></path>
+</svg>

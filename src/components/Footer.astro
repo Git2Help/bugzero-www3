@@ -1,0 +1,27 @@
+---
+// Footer BugZero
+import BugZeroLogo from './BugZeroLogo.astro';
+---
+
+<footer class="relative z-10 border-t-2 border-black bg-neutral-50 py-12">
+  <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6 text-neutral-600 font-medium">
+    <div class="flex items-center">
+      <BugZeroLogo class="w-32 h-auto" />
+    </div>
+    <div class="flex items-center gap-2 hover:text-red-600 transition-colors cursor-pointer">
+      <i data-lucide="phone" class="w-5 h-5"></i>
+      <span class="text-lg">036679039</span>
+    </div>
+    <div class="flex items-center gap-2 hover:text-blue-600 transition-colors cursor-pointer">
+      <i data-lucide="mail" class="w-5 h-5"></i>
+      <span class="text-lg">bugzero</span>
+    </div>
+    <div class="flex items-center gap-2 hover:text-pink-600 transition-colors cursor-pointer">
+      <i data-lucide="instagram" class="w-5 h-5"></i>
+      <span class="text-lg">pixel_pals_technology</span>
+    </div>
+  </div>
+  <div class="text-center mt-12 text-sm text-neutral-400 font-sans">
+    © 2026 BugZero. Tous droits réservés.
+  </div>
+</footer>

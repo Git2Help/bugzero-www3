@@ -1,0 +1,14 @@
+---
+// Bouton principal style "hard shadow"
+export interface Props {
+  href?: string;
+  class?: string;
+}
+
+const { href, class: className = "" } = Astro.props;
+const Tag = href ? "a" : "button";
+---
+
+<{Tag} href={href || undefined} class={"px-8 py-4 bg-yellow-400 border-2 border-black font-pixel text-2xl text-black shadow-hard shadow-hard-hover transition-all duration-200 " + className}>
+  <slot />
+</{Tag}>

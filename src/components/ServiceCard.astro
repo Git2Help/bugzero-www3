@@ -1,0 +1,20 @@
+---
+// Carte de service colorée
+export interface Props {
+  bgColor?: string;
+  borderColor?: string;
+  icon: string;
+  title: string;
+  pixel?: boolean;
+}
+
+const { bgColor = "bg-neutral-100", borderColor = "border-neutral-200", icon, title, pixel = false } = Astro.props;
+const titleClass = pixel ? "font-pixel text-2xl text-white" : "font-sans font-medium text-lg leading-tight";
+---
+
+<div class={"group " + bgColor + " border-2 " + borderColor + " p-8 flex flex-col items-center justify-center gap-4 text-center shadow-hard-sm hover:shadow-hard hover:-translate-y-1 transition-all duration-300"}>
+  <div class="p-4 border-2 border-white text-white rounded-none shadow-sm">
+    <i data-lucide={icon} class="w-8 h-8"></i>
+  </div>
+  <h3 class={titleClass} set:html={title}></h3>
+</div>

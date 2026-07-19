@@ -1,0 +1,20 @@
+---
+// Bouton avec effet "offset" (contact section)
+export interface Props {
+  href?: string;
+  bgColor?: string;
+  bgDark?: string;
+  icon?: string;
+  iconClass?: string;
+}
+
+const { href = "#", bgColor = "bg-red-500", bgDark = "bg-red-800", icon, iconClass = "" } = Astro.props;
+---
+
+<a href={href} class="group relative w-full">
+  <div class={"absolute inset-0 " + bgDark + " translate-x-1 translate-y-1 transition-transform group-hover:translate-x-2 group-hover:translate-y-2"}></div>
+  <div class={"relative " + bgColor + " border-2 border-black p-4 flex items-center justify-center gap-3 text-white transition-transform group-hover:-translate-x-1 group-hover:-translate-y-1 group-active:translate-x-0 group-active:translate-y-0"}>
+    {icon && <i data-lucide={icon} class={"w-6 h-6 " + iconClass}></i>}
+    <span class="font-sans font-semibold text-lg"><slot /></span>
+  </div>
+</a>
