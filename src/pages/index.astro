@@ -5,7 +5,6 @@ import Footer from '../components/Footer.astro';
 import ButtonPrimary from '../components/ButtonPrimary.astro';
 import ButtonSecondary from '../components/ButtonSecondary.astro';
 import ButtonOffset from '../components/ButtonOffset.astro';
-import ServiceCard from '../components/ServiceCard.astro';
 ---
 
 <Layout>
@@ -18,15 +17,15 @@ import ServiceCard from '../components/ServiceCard.astro';
         <div class="inline-block px-3 py-1 bg-yellow-100 border border-yellow-400 rounded-none transform -rotate-1 shadow-sm">
           <span class="font-pixel text-yellow-800 text-lg uppercase tracking-wide">Assistance informatique express</span>
         </div>
-        <h1 class="font-pixel text-6xl lg:text-8xl leading-none tracking-tight text-neutral-900 bg-white/50 backdrop-blur-sm lg:bg-transparent lg:backdrop-blur-none p-2 lg:p-0 rounded-lg">
-          UN BUG ?<br>ON LE MET À <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-green-500 to-blue-500">ZÉRO.</span>
+        <h1 class="font-pixel text-5xl lg:text-7xl leading-none tracking-tight text-neutral-900 bg-white/50 backdrop-blur-sm lg:bg-transparent lg:backdrop-blur-none p-2 lg:p-0 rounded-lg">
+          Votre PC plante,<br>votre entreprise est <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-green-500 to-blue-500">à l'arrêt ?</span>
         </h1>
         <p class="text-xl lg:text-2xl text-neutral-600 leading-relaxed max-w-lg bg-white/80 lg:bg-transparent p-2 lg:p-0">
-          BugZero vous accompagne pour installer, réparer et simplifier votre informatique, chez vous comme au travail.
+          Bugzero intervient en 30 minutes. Diagnostic gratuit, solutions immédiates.
         </p>
         <div class="flex flex-wrap gap-4 pt-4">
-          <ButtonPrimary>Parlons de votre besoin</ButtonPrimary>
-          <ButtonSecondary>Voir nos services</ButtonSecondary>
+          <ButtonPrimary href="tel:+33678565430">Je règle mon problème maintenant</ButtonPrimary>
+          <ButtonSecondary href="#services">Voir nos services</ButtonSecondary>
         </div>
       </div>
       <div class="relative flex justify-center lg:justify-end animate-float">
@@ -50,76 +49,76 @@ import ServiceCard from '../components/ServiceCard.astro';
     </div>
   </section>
 
-  <!-- Services Section -->
+  <!-- 3 Cartes Services -->
   <section id="services" class="relative py-24 border-t-2 border-neutral-100 bg-white/50 backdrop-blur-sm z-10">
     <div class="max-w-7xl mx-auto px-6">
-      <h2 class="font-pixel text-6xl tracking-tight mb-16 text-center">NOS_EXPERTISES</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <!-- Pricing Card -->
-        <div class="lg:row-span-2 bg-yellow-50 border-2 border-yellow-400 p-8 flex flex-col justify-between items-center text-center shadow-hard-sm hover:shadow-hard transition-shadow group relative overflow-hidden">
-          <div class="absolute top-0 left-0 w-full h-2 bg-yellow-400"></div>
-          <div class="relative z-10">
-            <div class="font-pixel text-4xl mb-2 flex justify-center gap-1">
-              <span class="text-red-500">P</span><span class="text-green-500">A</span><span class="text-blue-500">L</span><span class="text-purple-500">S</span>
-            </div>
-            <p class="font-sans text-neutral-500 text-sm font-medium uppercase tracking-wider">Tarif horaire</p>
+      <h2 class="font-pixel text-5xl lg:text-6xl tracking-tight mb-16 text-center">NOS_SERVICES</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Particuliers -->
+        <a href="/particulier" class="group bg-purple-500 border-2 border-black p-8 flex flex-col items-center justify-center gap-4 text-center shadow-hard-sm hover:shadow-hard hover:-translate-y-1 transition-all duration-300">
+          <div class="p-4 border-2 border-white text-white rounded-none">
+            <i data-lucide="home" class="w-8 h-8"></i>
           </div>
-          <div class="py-8 relative z-10">
-            <span class="font-pixel text-8xl text-neutral-900">$80</span>
-            <span class="block font-sans text-neutral-500 text-lg">/ heure</span>
+          <h3 class="font-pixel text-3xl text-white">Particuliers</h3>
+          <p class="font-sans text-white/90 leading-relaxed">Dépannage express, installation, conseils. On s'occupe de tout, à distance ou à domicile.</p>
+        </a>
+        <!-- Professionnels -->
+        <a href="/professionnel" class="group bg-blue-500 border-2 border-black p-8 flex flex-col items-center justify-center gap-4 text-center shadow-hard-sm hover:shadow-hard hover:-translate-y-1 transition-all duration-300">
+          <div class="p-4 border-2 border-white text-white rounded-none">
+            <i data-lucide="building-2" class="w-8 h-8"></i>
           </div>
-          <div class="space-y-2 text-sm text-neutral-600 font-medium relative z-10">
-            <p>- Première heure minimum</p>
-            <p>- Déplacement sur devis</p>
+          <h3 class="font-pixel text-3xl text-white">Professionnels</h3>
+          <p class="font-sans text-white/90 leading-relaxed">Infogérance, cybersécurité, visibilité web. Votre service IT clé-en-main, sans engagement.</p>
+        </a>
+        <!-- Fonds Bleu -->
+        <a href="/professionnel/creation-site" class="group bg-cyan-500 border-2 border-black p-8 flex flex-col items-center justify-center gap-4 text-center shadow-hard-sm hover:shadow-hard hover:-translate-y-1 transition-all duration-300">
+          <div class="p-4 border-2 border-white text-white rounded-none">
+            <i data-lucide="banknote" class="w-8 h-8"></i>
           </div>
-        </div>
-        <ServiceCard bgColor="bg-white" borderColor="border-neutral-200" icon="laptop" title="Installation d'ordinateur &amp; transfert de données" />
-        <ServiceCard bgColor="bg-red-500" borderColor="border-black" icon="smartphone" title="Configuration téléphone" pixel={true} />
-        <ServiceCard bgColor="bg-purple-500" borderColor="border-black" icon="gamepad-2" title="PC sur mesure / Gaming" pixel={true} />
-        <ServiceCard bgColor="bg-green-500" borderColor="border-black" icon="wifi" title="Installation Wi-Fi" pixel={true} />
-        <ServiceCard bgColor="bg-blue-500" borderColor="border-black" icon="home" title="Maison / Entreprise" pixel={true} />
-        <ServiceCard bgColor="bg-pink-500" borderColor="border-black" icon="server" title="NAS / Serveur" pixel={true} />
+          <h3 class="font-pixel text-3xl text-white">Fonds Bleu (Monaco)</h3>
+          <p class="font-sans text-white/90 leading-relaxed">Jusqu'à 70% de subventions pour votre site, SEO, appli. On monte le dossier gratuitement.</p>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- About Section -->
+  <!-- Pourquoi Bugzero -->
   <section id="about" class="relative py-24 bg-neutral-50/90 border-t-2 border-neutral-200 z-10">
     <div class="max-w-7xl mx-auto px-6">
       <div class="grid lg:grid-cols-12 gap-12">
         <div class="lg:col-span-4">
           <div class="lg:sticky lg:top-32">
-            <h2 class="font-pixel text-6xl tracking-tight mb-6">POURQUOI_BUGZERO</h2>
+            <h2 class="font-pixel text-5xl lg:text-6xl tracking-tight mb-6">POURQUOI_NOUS</h2>
             <div class="w-20 h-2 bg-neutral-900 mb-6"></div>
-            <p class="text-xl text-neutral-500 font-medium">Une assistance informatique claire, humaine et sans jargon.</p>
+            <p class="text-xl text-neutral-500 font-medium">Pourquoi nos clients nous recommandent.</p>
           </div>
         </div>
-        <div class="lg:col-span-8 space-y-12">
-          <div class="bg-white p-8 border-2 border-neutral-100 shadow-sm relative overflow-hidden">
-            <h3 class="font-sans text-2xl font-semibold mb-4 flex items-center gap-3 relative z-10">Comment ça marche</h3>
-            <p class="text-lg text-neutral-600 leading-relaxed relative z-10">Expliquez-nous votre souci, nous identifions la solution puis intervenons avec vous, à distance ou sur place. Simple, rapide et transparent.</p>
-          </div>
-          <div class="bg-white p-8 border-2 border-neutral-100 shadow-sm relative overflow-hidden">
-            <h3 class="font-sans text-2xl font-semibold mb-4 flex items-center gap-3 relative z-10">Témoignages</h3>
-            <p class="text-lg text-neutral-600 leading-relaxed relative z-10">« Une aide rapide, des explications claires et un ordinateur enfin prêt à l'emploi. » — Un client BugZero</p>
-          </div>
-          <div class="bg-white p-8 border-2 border-neutral-100 shadow-sm relative overflow-hidden">
-            <h3 class="font-sans text-2xl font-semibold mb-4 flex items-center gap-3 relative z-10">Notre engagement</h3>
-            <p class="text-lg text-neutral-600 leading-relaxed mb-6 relative z-10">Nous rendons l'informatique plus simple avec des solutions adaptées à votre besoin et à votre budget.</p>
-            <ul class="space-y-3 relative z-10">
+        <div class="lg:col-span-8 space-y-6">
+          <div class="bg-white p-8 border-2 border-neutral-100 shadow-sm">
+            <ul class="space-y-4">
               <li class="flex items-start gap-3">
-                <div class="w-2 h-2 mt-2.5 bg-neutral-900 flex-shrink-0"></div>
-                <span class="text-lg text-neutral-600"><strong class="text-neutral-900 font-semibold">Clarté :</strong> des explications compréhensibles à chaque étape.</span>
+                <div class="w-3 h-3 mt-2.5 bg-neutral-900 flex-shrink-0"></div>
+                <span class="text-lg text-neutral-700"><strong class="text-neutral-900 font-semibold">15 ans d'expertise</strong> à Monaco et PACA.</span>
               </li>
               <li class="flex items-start gap-3">
-                <div class="w-2 h-2 mt-2.5 bg-neutral-900 flex-shrink-0"></div>
-                <span class="text-lg text-neutral-600"><strong class="text-neutral-900 font-semibold">Réactivité :</strong> une aide efficace quand vous en avez besoin.</span>
+                <div class="w-3 h-3 mt-2.5 bg-neutral-900 flex-shrink-0"></div>
+                <span class="text-lg text-neutral-700"><strong class="text-neutral-900 font-semibold">Intervention en moins de 2h</strong> (appel avant 14h).</span>
               </li>
               <li class="flex items-start gap-3">
-                <div class="w-2 h-2 mt-2.5 bg-neutral-900 flex-shrink-0"></div>
-                <span class="text-lg text-neutral-600"><strong class="text-neutral-900 font-semibold">Confiance :</strong> des conseils honnêtes, sans surprise.</span>
+                <div class="w-3 h-3 mt-2.5 bg-neutral-900 flex-shrink-0"></div>
+                <span class="text-lg text-neutral-700"><strong class="text-neutral-900 font-semibold">800+ dépannages réussis</strong>, 98% de satisfaction.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="w-3 h-3 mt-2.5 bg-neutral-900 flex-shrink-0"></div>
+                <span class="text-lg text-neutral-700"><strong class="text-neutral-900 font-semibold">Partenaires officiels :</strong> Monaco Cloud, Dell, Bitdefender.</span>
               </li>
             </ul>
+          </div>
+          <!-- Témoignage -->
+          <div class="bg-yellow-50 border-2 border-yellow-400 p-8 shadow-hard-sm relative">
+            <i data-lucide="quote" class="w-10 h-10 text-yellow-500 mb-4"></i>
+            <p class="font-sans text-xl text-neutral-800 leading-relaxed italic">« Frédéric a récupéré tous mes fichiers en 45 minutes. Incroyable réactivité ! »</p>
+            <p class="font-pixel text-lg text-neutral-900 mt-4">– Sophie, particulière à Nice</p>
           </div>
         </div>
       </div>
@@ -129,11 +128,11 @@ import ServiceCard from '../components/ServiceCard.astro';
   <!-- Contact Section -->
   <section id="contact" class="relative py-32 px-6 z-10">
     <div class="max-w-3xl mx-auto text-center relative z-10">
-      <h2 class="font-pixel text-5xl lg:text-7xl tracking-tight mb-12 bg-white/50 backdrop-blur-sm p-4 rounded-xl inline-block">PRÊT À DIRE ADIEU AUX BUGS ?</h2>
+      <h2 class="font-pixel text-4xl lg:text-6xl tracking-tight mb-12 bg-white/50 backdrop-blur-sm p-4 rounded-xl inline-block">PRÊT À DIRE ADIEU AUX BUGS ?</h2>
       <div class="flex flex-col gap-6 max-w-sm mx-auto">
-        <ButtonOffset href="tel:036679039" bgColor="bg-red-500" bgDark="bg-red-800" icon="phone" iconClass="fill-current">Appelez-nous</ButtonOffset>
-        <ButtonOffset href="mailto:enquiries@pixelpals.co.nz" bgColor="bg-blue-500" bgDark="bg-blue-800" icon="mail" iconClass="fill-current">Écrivez-nous</ButtonOffset>
-        <ButtonOffset href="#" bgColor="bg-pink-500" bgDark="bg-pink-800" icon="instagram">Envoyez-nous un message</ButtonOffset>
+        <ButtonOffset href="tel:+33678565430" bgColor="bg-red-500" bgDark="bg-red-800" icon="phone" iconClass="fill-current">06 78 56 54 30</ButtonOffset>
+        <ButtonOffset href="mailto:bonjour@bugzero.fr" bgColor="bg-blue-500" bgDark="bg-blue-800" icon="mail" iconClass="fill-current">bonjour@bugzero.fr</ButtonOffset>
+        <ButtonOffset href="https://maps.google.com/?q=9+Allée+Lazare+Sauvaigo+98000+Monaco" bgColor="bg-green-500" bgDark="bg-green-800" icon="map-pin">9, Allée Lazare Sauvaigo, Monaco</ButtonOffset>
       </div>
     </div>
   </section>

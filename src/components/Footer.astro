@@ -4,24 +4,52 @@ import BugZeroLogo from './BugZeroLogo.astro';
 ---
 
 <footer class="relative z-10 border-t-2 border-black bg-neutral-50 py-12">
-  <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6 text-neutral-600 font-medium">
-    <div class="flex items-center">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-8 text-neutral-600 font-medium">
+    <!-- Logo + coordonnées -->
+    <div class="space-y-3">
       <BugZeroLogo class="w-32 h-auto" />
+      <p class="font-sans text-sm text-neutral-500 leading-relaxed">
+        Le service informatique d'Helperiance. À votre service depuis 15 ans.
+      </p>
     </div>
-    <div class="flex items-center gap-2 hover:text-red-600 transition-colors cursor-pointer">
-      <i data-lucide="phone" class="w-5 h-5"></i>
-      <span class="text-lg">036679039</span>
+
+    <!-- Coordonnées -->
+    <div class="space-y-3">
+      <h3 class="font-pixel text-lg text-neutral-900">CONTACT</h3>
+      <a href="tel:+33678565430" class="flex items-center gap-2 hover:text-red-600 transition-colors">
+        <i data-lucide="phone" class="w-5 h-5"></i>
+        <span class="text-lg">06 78 56 54 30</span>
+      </a>
+      <a href="mailto:bonjour@bugzero.fr" class="flex items-center gap-2 hover:text-blue-600 transition-colors">
+        <i data-lucide="mail" class="w-5 h-5"></i>
+        <span class="text-lg">bonjour@bugzero.fr</span>
+      </a>
+      <div class="flex items-start gap-2">
+        <i data-lucide="map-pin" class="w-5 h-5 mt-1"></i>
+        <span class="text-lg">9, Allée Lazare Sauvaigo, 98000 Monaco</span>
+      </div>
     </div>
-    <div class="flex items-center gap-2 hover:text-blue-600 transition-colors cursor-pointer">
-      <i data-lucide="mail" class="w-5 h-5"></i>
-      <span class="text-lg">bugzero</span>
+
+    <!-- Liens professionnels -->
+    <div class="space-y-2">
+      <h3 class="font-pixel text-lg text-neutral-900">PROFESSIONNELS</h3>
+      <a href="/professionnel" class="block hover:text-blue-600 transition-colors">Vue d'ensemble</a>
+      <a href="/professionnel/maintenance-pro" class="block hover:text-blue-600 transition-colors">Maintenance Pro</a>
+      <a href="/professionnel/audit-securite" class="block hover:text-blue-600 transition-colors">Audit de sécurité</a>
+      <a href="/professionnel/creation-site" class="block hover:text-blue-600 transition-colors">Création de site</a>
+      <a href="/professionnel/infogerance" class="block hover:text-blue-600 transition-colors">Infogérance</a>
     </div>
-    <div class="flex items-center gap-2 hover:text-pink-600 transition-colors cursor-pointer">
-      <i data-lucide="instagram" class="w-5 h-5"></i>
-      <span class="text-lg">pixel_pals_technology</span>
+
+    <!-- Liens divers -->
+    <div class="space-y-2">
+      <h3 class="font-pixel text-lg text-neutral-900">INFOS</h3>
+      <a href="/particulier" class="block hover:text-blue-600 transition-colors">Particuliers</a>
+      <a href="/qui-sommes-nous" class="block hover:text-blue-600 transition-colors">Qui sommes-nous</a>
+      <a href="/mentions-legales" class="block hover:text-blue-600 transition-colors">Mentions légales</a>
+      <a href="/confidentialite" class="block hover:text-blue-600 transition-colors">Confidentialité</a>
     </div>
   </div>
   <div class="text-center mt-12 text-sm text-neutral-400 font-sans">
-    © 2026 BugZero. Tous droits réservés.
+    © 2026 BugZero, service d'Helperiance. Tous droits réservés.
   </div>
 </footer>

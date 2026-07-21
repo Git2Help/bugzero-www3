@@ -5,7 +5,6 @@ import Footer from '../../components/Footer.astro';
 import ButtonPrimary from '../../components/ButtonPrimary.astro';
 import ButtonSecondary from '../../components/ButtonSecondary.astro';
 import ButtonOffset from '../../components/ButtonOffset.astro';
-import ServiceCard from '../../components/ServiceCard.astro';
 ---
 
 <Layout title="BugZero | Particulier - Dépannage informatique à domicile">
@@ -18,15 +17,15 @@ import ServiceCard from '../../components/ServiceCard.astro';
         <div class="inline-block px-3 py-1 bg-yellow-100 border border-yellow-400 rounded-none transform -rotate-1 shadow-sm">
           <span class="font-pixel text-yellow-800 text-lg uppercase tracking-wide">Dépannage informatique</span>
         </div>
-        <h1 class="font-pixel text-6xl lg:text-8xl leading-none tracking-tight text-neutral-900 bg-white/50 backdrop-blur-sm lg:bg-transparent lg:backdrop-blur-none p-2 lg:p-0 rounded-lg">
-          VOTRE PC NE<br>MARCHE PLUS ? <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500">ON S'EN OCCUPE.</span>
+        <h1 class="font-pixel text-5xl lg:text-7xl leading-none tracking-tight text-neutral-900 bg-white/50 backdrop-blur-sm lg:bg-transparent lg:backdrop-blur-none p-2 lg:p-0 rounded-lg">
+          Un écran noir,<br>un virus, un ordi qui <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500">rame ?</span>
         </h1>
         <p class="text-xl lg:text-2xl text-neutral-600 leading-relaxed max-w-lg bg-white/80 lg:bg-transparent p-2 lg:p-0">
-          BugZero intervient chez vous à Monaco, Nice et Menton pour résoudre tous vos problèmes informatiques.
+          On le répare à distance en 30 minutes. Sans vous déplacer, sans stress.
         </p>
         <div class="flex flex-wrap gap-4 pt-4">
-          <ButtonPrimary>Prendre rendez-vous</ButtonPrimary>
-          <ButtonSecondary>Voir nos services</ButtonSecondary>
+          <ButtonPrimary href="tel:+33678565430">Je veux un dépannage immédiat</ButtonPrimary>
+          <ButtonSecondary href="#services">Voir nos services</ButtonSecondary>
         </div>
       </div>
       <div class="relative flex justify-center lg:justify-end animate-float">
@@ -48,114 +47,107 @@ import ServiceCard from '../../components/ServiceCard.astro';
     </div>
   </section>
 
-  <!-- 2. Dépannage à distance -->
-  <section class="relative py-24 border-t-2 border-neutral-100 bg-white/50 backdrop-blur-sm z-10">
+  <!-- 2. Services -->
+  <section id="services" class="relative py-24 border-t-2 border-neutral-100 bg-white/50 backdrop-blur-sm z-10">
     <div class="max-w-7xl mx-auto px-6">
-      <div class="grid lg:grid-cols-12 gap-12">
-        <div class="lg:col-span-4">
-          <div class="lg:sticky lg:top-32">
-            <h2 class="font-pixel text-6xl tracking-tight mb-6">DÉPANNAGE_À_DISTANCE</h2>
-            <div class="w-20 h-2 bg-neutral-900 mb-6"></div>
-            <p class="text-xl text-neutral-500 font-medium">Rapide, sécurisé, efficace.</p>
+      <h2 class="font-pixel text-5xl lg:text-6xl tracking-tight mb-16 text-center">NOS_SERVICES</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Dépannage à distance -->
+        <div class="bg-white p-8 border-2 border-black shadow-hard-sm hover:shadow-hard transition-shadow flex flex-col">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="p-3 border-2 border-black bg-purple-500 text-white">
+              <i data-lucide="monitor" class="w-8 h-8"></i>
+            </div>
+            <h3 class="font-pixel text-3xl text-neutral-900">Dépannage à distance</h3>
           </div>
+          <p class="text-lg text-neutral-600 leading-relaxed mb-4">Connexion sécurisée, diagnostic et résolution en direct. 30 min max.</p>
+          <span class="font-pixel text-4xl text-purple-600 mt-auto">49€ HT</span>
         </div>
-        <div class="lg:col-span-8 space-y-6">
-          <div class="bg-white p-8 border-2 border-neutral-100 shadow-sm">
-            <h3 class="font-sans text-2xl font-semibold mb-4">Connexion sécurisée en 5 minutes</h3>
-            <p class="text-lg text-neutral-600">Notre technicien prend le contrôle de votre PC en toute sécurité via une connexion chiffrée. Pas de rendez-vous à poser, pas de déplacement. Comptez environ 30 minutes pour la plupart des dépannages.</p>
-            <p class="text-lg text-neutral-600 mt-4">Problèmes courants traités à distance : virus, ralentissements, installation de logiciels, configuration email, impressions, mises à jour Windows.</p>
+        <!-- Dépannage sur site -->
+        <div class="bg-white p-8 border-2 border-black shadow-hard-sm hover:shadow-hard transition-shadow flex flex-col">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="p-3 border-2 border-black bg-red-500 text-white">
+              <i data-lucide="map-pin" class="w-8 h-8"></i>
+            </div>
+            <h3 class="font-pixel text-3xl text-neutral-900">Dépannage sur site</h3>
           </div>
+          <p class="text-lg text-neutral-600 leading-relaxed mb-4">Monaco, Nice, Menton. Hardware, panne, virus.</p>
+          <span class="font-pixel text-4xl text-red-500 mt-auto">89€ HT/heure</span>
+        </div>
+        <!-- Maintenance préventive -->
+        <div class="bg-white p-8 border-2 border-black shadow-hard-sm hover:shadow-hard transition-shadow flex flex-col">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="p-3 border-2 border-black bg-cyan-500 text-white">
+              <i data-lucide="shield" class="w-8 h-8"></i>
+            </div>
+            <h3 class="font-pixel text-3xl text-neutral-900">Maintenance préventive</h3>
+          </div>
+          <p class="text-lg text-neutral-600 leading-relaxed mb-4">Nettoyage complet + antivirus + sauvegarde.</p>
+          <span class="font-pixel text-4xl text-cyan-600 mt-auto">89€ HT/heure</span>
+        </div>
+        <!-- Formation sur mesure -->
+        <div class="bg-white p-8 border-2 border-black shadow-hard-sm hover:shadow-hard transition-shadow flex flex-col">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="p-3 border-2 border-black bg-green-500 text-white">
+              <i data-lucide="graduation-cap" class="w-8 h-8"></i>
+            </div>
+            <h3 class="font-pixel text-3xl text-neutral-900">Formation sur mesure</h3>
+          </div>
+          <p class="text-lg text-neutral-600 leading-relaxed mb-4">Bureautique, Internet, sauvegarde.</p>
+          <span class="font-pixel text-4xl text-green-600 mt-auto">dès 89€ HT/heure</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 3. Dépannage sur site -->
+  <!-- 3. Pourquoi nous choisir -->
   <section class="relative py-24 bg-neutral-50/90 border-t-2 border-neutral-200 z-10">
     <div class="max-w-7xl mx-auto px-6">
       <div class="grid lg:grid-cols-12 gap-12">
         <div class="lg:col-span-4">
           <div class="lg:sticky lg:top-32">
-            <h2 class="font-pixel text-6xl tracking-tight mb-6">DÉPANNAGE_SUR_SITE</h2>
+            <h2 class="font-pixel text-5xl lg:text-6xl tracking-tight mb-6">POURQUOI_NOUS</h2>
             <div class="w-20 h-2 bg-neutral-900 mb-6"></div>
-            <p class="text-xl text-neutral-500 font-medium">On se déplace chez vous.</p>
-          </div>
-        </div>
-        <div class="lg:col-span-8 space-y-6">
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div class="bg-red-500 border-2 border-black p-6 flex flex-col items-center justify-center text-center shadow-hard-sm">
-              <i data-lucide="map-pin" class="w-10 h-10 text-white mb-2"></i>
-              <h3 class="font-pixel text-2xl text-white">Monaco</h3>
-              <p class="font-sans text-white/80 text-sm">Intervention sous 24h</p>
-            </div>
-            <div class="bg-blue-500 border-2 border-black p-6 flex flex-col items-center justify-center text-center shadow-hard-sm">
-              <i data-lucide="map-pin" class="w-10 h-10 text-white mb-2"></i>
-              <h3 class="font-pixel text-2xl text-white">Nice</h3>
-              <p class="font-sans text-white/80 text-sm">Intervention sous 48h</p>
-            </div>
-            <div class="bg-green-500 border-2 border-black p-6 flex flex-col items-center justify-center text-center shadow-hard-sm">
-              <i data-lucide="map-pin" class="w-10 h-10 text-white mb-2"></i>
-              <h3 class="font-pixel text-2xl text-white">Menton</h3>
-              <p class="font-sans text-white/80 text-sm">Intervention sous 24h</p>
-            </div>
-          </div>
-          <div class="bg-white p-8 border-2 border-neutral-100 shadow-sm">
-            <p class="text-lg text-neutral-600">Nous intervenons également dans les Alpes-Maritimes pour les cas nécessitant une présence physique : réparation matérielle, installation de réseau, câblage, configuration d'équipements.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 4. Maintenance préventive -->
-  <section class="relative py-24 border-t-2 border-neutral-100 bg-white/50 backdrop-blur-sm z-10">
-    <div class="max-w-7xl mx-auto px-6">
-      <h2 class="font-pixel text-6xl tracking-tight mb-16 text-center">MAINTENANCE_PRÉVENTIVE</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-<ServiceCard bgColor="bg-cyan-500" borderColor="border-black" icon="spray-can" title="Nettoyage &amp; Optimisation" pixel={true} />
-<ServiceCard bgColor="bg-red-500" borderColor="border-black" icon="shield" title="Antivirus &amp; Sécurité" pixel={true} />
-        <ServiceCard bgColor="bg-blue-500" borderColor="border-black" icon="hard-drive" title="Sauvegarde de données" pixel={true} />
-      </div>
-    </div>
-  </section>
-
-  <!-- 5. Formation -->
-  <section class="relative py-24 bg-neutral-50/90 border-t-2 border-neutral-200 z-10">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="grid lg:grid-cols-12 gap-12">
-        <div class="lg:col-span-4">
-          <div class="lg:sticky lg:top-32">
-            <h2 class="font-pixel text-6xl tracking-tight mb-6">FORMATION</h2>
-            <div class="w-20 h-2 bg-neutral-900 mb-6"></div>
-            <p class="text-xl text-neutral-500 font-medium">Apprenez à votre rythme, chez vous.</p>
+            <p class="text-xl text-neutral-500 font-medium">Choisir Bugzero, c'est choisir la tranquillité.</p>
           </div>
         </div>
         <div class="lg:col-span-8 space-y-6">
           <div class="bg-white p-8 border-2 border-neutral-100 shadow-sm">
-            <h3 class="font-sans text-2xl font-semibold mb-4">Initiation aux logiciels</h3>
-            <p class="text-lg text-neutral-600">Apprenez les bases de Windows, macOS, ou Linux. Navigation internet, email, gestion de fichiers. Formation adaptée aux débutants comme aux utilisateurs avancés.</p>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <div class="w-3 h-3 mt-2.5 bg-neutral-900 flex-shrink-0"></div>
+                <span class="text-lg text-neutral-700"><strong class="text-neutral-900 font-semibold">Intervention le jour même</strong> (appel avant 14h).</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="w-3 h-3 mt-2.5 bg-neutral-900 flex-shrink-0"></div>
+                <span class="text-lg text-neutral-700"><strong class="text-neutral-900 font-semibold">Techniciens patients</strong>, explications claires.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="w-3 h-3 mt-2.5 bg-neutral-900 flex-shrink-0"></div>
+                <span class="text-lg text-neutral-700"><strong class="text-neutral-900 font-semibold">Satisfait ou résolu</strong> sans frais supplémentaires.</span>
+              </li>
+            </ul>
           </div>
-          <div class="bg-white p-8 border-2 border-neutral-100 shadow-sm">
-            <h3 class="font-sans text-2xl font-semibold mb-4">Traitement de texte & bureautique</h3>
-            <p class="text-lg text-neutral-600">Maîtrisez Word, Excel, PowerPoint et les alternatives libres. Rédaction de courriers, tableaux de calcul, présentations. Formation individuelle ou en petit groupe.</p>
-          </div>
-          <div class="bg-white p-8 border-2 border-neutral-100 shadow-sm">
-            <h3 class="font-sans text-2xl font-semibold mb-4">Logiciels de comptabilité</h3>
-            <p class="text-lg text-neutral-600">Initiation aux outils de gestion pour les indépendants et petites entreprises. Tenue de comptes, déclarations, suivi budgétaire.</p>
+          <!-- Témoignage -->
+          <div class="bg-yellow-50 border-2 border-yellow-400 p-8 shadow-hard-sm">
+            <i data-lucide="quote" class="w-10 h-10 text-yellow-500 mb-4"></i>
+            <p class="font-sans text-xl text-neutral-800 leading-relaxed italic">« Alex a éliminé toutes les pubs de mon PC en visio. Magique ! »</p>
+            <p class="font-pixel text-lg text-neutral-900 mt-4">– Marc, retraité à Monaco</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 6. Contact -->
+  <!-- 4. Contact -->
   <section class="relative py-32 px-6 z-10">
     <div class="max-w-3xl mx-auto text-center relative z-10">
-      <h2 class="font-pixel text-5xl lg:text-7xl tracking-tight mb-12 bg-white/50 backdrop-blur-sm p-4 rounded-xl inline-block">BESOIN D'AIDE ?</h2>
+      <h2 class="font-pixel text-4xl lg:text-6xl tracking-tight mb-8 bg-white/50 backdrop-blur-sm p-4 rounded-xl inline-block">BESOIN_D'AIDE ?</h2>
+      <p class="text-xl text-neutral-600 mb-12">Appelez le 06 78 56 54 30 ou prenez rendez-vous en ligne.</p>
       <div class="flex flex-col gap-6 max-w-sm mx-auto">
-        <ButtonOffset href="tel:0678565430" bgColor="bg-red-500" bgDark="bg-red-800" icon="phone" iconClass="fill-current">06 78 56 54 30</ButtonOffset>
-        <ButtonOffset href="mailto:contact@bugzero.com" bgColor="bg-blue-500" bgDark="bg-blue-800" icon="mail" iconClass="fill-current">contact@bugzero.com</ButtonOffset>
-        <ButtonOffset href="#" bgColor="bg-pink-500" bgDark="bg-pink-800" icon="map-pin">Monaco - Nice - Menton</ButtonOffset>
+        <ButtonOffset href="tel:+33678565430" bgColor="bg-red-500" bgDark="bg-red-800" icon="phone" iconClass="fill-current">06 78 56 54 30</ButtonOffset>
+        <ButtonOffset href="mailto:bonjour@bugzero.fr" bgColor="bg-blue-500" bgDark="bg-blue-800" icon="mail" iconClass="fill-current">bonjour@bugzero.fr</ButtonOffset>
+        <ButtonOffset href="https://maps.google.com/?q=9+Allée+Lazare+Sauvaigo+98000+Monaco" bgColor="bg-green-500" bgDark="bg-green-800" icon="map-pin">Monaco - Nice - Menton</ButtonOffset>
       </div>
       <p class="mt-8 text-lg text-neutral-500 font-medium">Intervention du lundi au samedi, de 9h à 19h. Urgences possibles.</p>
     </div>

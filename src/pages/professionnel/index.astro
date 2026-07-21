@@ -17,15 +17,15 @@ import ButtonOffset from '../../components/ButtonOffset.astro';
         <div class="inline-block px-3 py-1 bg-yellow-100 border border-yellow-400 rounded-none transform -rotate-1 shadow-sm">
           <span class="font-pixel text-yellow-800 text-lg uppercase tracking-wide">Solutions professionnelles</span>
         </div>
-        <h1 class="font-pixel text-6xl lg:text-8xl leading-none tracking-tight text-neutral-900 bg-white/50 backdrop-blur-sm lg:bg-transparent lg:backdrop-blur-none p-2 lg:p-0 rounded-lg">
-          VOTRE PARTENAIRE<br>IT À <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-cyan-500 to-green-500">MONACO</span>
+        <h1 class="font-pixel text-4xl lg:text-6xl leading-none tracking-tight text-neutral-900 bg-white/50 backdrop-blur-sm lg:bg-transparent lg:backdrop-blur-none p-2 lg:p-0 rounded-lg">
+          Votre informatique sur-mesure,<br>sans recruter. <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-cyan-500 to-green-500">Dès 59€ HT/mois.</span>
         </h1>
         <p class="text-xl lg:text-2xl text-neutral-600 leading-relaxed max-w-lg bg-white/80 lg:bg-transparent p-2 lg:p-0">
-          BugZero accompagne les professionnels et entreprises de Monaco et de la Côte d'Azur pour toute leur infrastructure informatique.
+          Infogérance, cybersécurité, sites web et SEO pour TPE/PME. Concentrez-vous sur votre business.
         </p>
         <div class="flex flex-wrap gap-4 pt-4">
-          <ButtonPrimary>Contactez-nous</ButtonPrimary>
-          <ButtonSecondary>Découvrir nos formules</ButtonSecondary>
+          <ButtonPrimary href="#formules">Voir les formules</ButtonPrimary>
+          <ButtonSecondary href="/professionnel/maintenance-pro">Comparer les formules</ButtonSecondary>
         </div>
       </div>
       <div class="relative flex justify-center lg:justify-end animate-float">
@@ -48,68 +48,52 @@ import ButtonOffset from '../../components/ButtonOffset.astro';
   </section>
 
   <!-- 2. Formules Maintenance -->
-  <section class="relative py-24 border-t-2 border-neutral-100 bg-white/50 backdrop-blur-sm z-10">
+  <section id="formules" class="relative py-24 border-t-2 border-neutral-100 bg-white/50 backdrop-blur-sm z-10">
     <div class="max-w-7xl mx-auto px-6">
-      <h2 class="font-pixel text-6xl tracking-tight mb-16 text-center">FORMULES_MAINTENANCE</h2>
+      <h2 class="font-pixel text-5xl lg:text-6xl tracking-tight mb-16 text-center">FORMULES_MAINTENANCE</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <!-- Formule 1 : 199€ -->
+        <!-- Supervision-Assistance : 79€ -->
         <div class="bg-yellow-50 border-2 border-yellow-400 p-8 flex flex-col items-center text-center shadow-hard-sm hover:shadow-hard transition-shadow relative overflow-hidden">
           <div class="absolute top-0 left-0 w-full h-2 bg-yellow-400"></div>
           <div class="relative z-10 space-y-4">
-            <h3 class="font-pixel text-3xl">Starter</h3>
-            <span class="font-pixel text-6xl text-neutral-900">199€</span>
-            <span class="block font-sans text-neutral-500">/ mois</span>
-            <ul class="space-y-2 text-sm text-neutral-600 font-medium text-left">
-              <li>- 1 poste de travail</li>
-              <li>- Support téléphonique</li>
-              <li>- Assistance à distance</li>
-            </ul>
-            <button class="px-6 py-3 bg-yellow-400 border-2 border-black font-pixel text-xl text-black shadow-hard-sm shadow-hard-hover transition-all duration-200">Choisir</button>
+            <h3 class="font-pixel text-2xl">Supervision-Assistance</h3>
+            <span class="font-pixel text-5xl text-neutral-900">79€</span>
+            <span class="block font-sans text-neutral-500">/ mois HT</span>
+            <p class="text-sm text-neutral-600 font-medium text-left">Supervision 24/7 + Bitdefender + MSP360. Pour les indépendants.</p>
+            <a href="mailto:bonjour@bugzero.fr" class="inline-block px-4 py-2 bg-yellow-400 border-2 border-black font-pixel text-lg text-black shadow-hard-sm shadow-hard-hover transition-all duration-200">Choisir</a>
           </div>
         </div>
-        <!-- Formule 2 : 399€ -->
+        <!-- Liberté : 99€ -->
         <div class="bg-green-50 border-2 border-green-400 p-8 flex flex-col items-center text-center shadow-hard-sm hover:shadow-hard transition-shadow relative overflow-hidden">
           <div class="absolute top-0 left-0 w-full h-2 bg-green-400"></div>
           <div class="relative z-10 space-y-4">
-            <h3 class="font-pixel text-3xl">Business</h3>
-            <span class="font-pixel text-6xl text-neutral-900">399€</span>
-            <span class="block font-sans text-neutral-500">/ mois</span>
-            <ul class="space-y-2 text-sm text-neutral-600 font-medium text-left">
-              <li>- 3 postes de travail</li>
-              <li>- Support téléphonique & mail</li>
-              <li>- Maintenance préventive</li>
-            </ul>
-            <button class="px-6 py-3 bg-green-400 border-2 border-black font-pixel text-xl text-black shadow-hard-sm shadow-hard-hover transition-all duration-200">Choisir</button>
+            <h3 class="font-pixel text-2xl">Liberté</h3>
+            <span class="font-pixel text-5xl text-neutral-900">99€</span>
+            <span class="block font-sans text-neutral-500">/ mois HT</span>
+            <p class="text-sm text-neutral-600 font-medium text-left">+1 appel mensuel (30 min), 6 tickets, assistance à distance.</p>
+            <a href="mailto:bonjour@bugzero.fr" class="inline-block px-4 py-2 bg-green-400 border-2 border-black font-pixel text-lg text-black shadow-hard-sm shadow-hard-hover transition-all duration-200">Choisir</a>
           </div>
         </div>
-        <!-- Formule 3 : 699€ -->
+        <!-- Puissance : 149€ -->
         <div class="bg-blue-50 border-2 border-blue-400 p-8 flex flex-col items-center text-center shadow-hard-sm hover:shadow-hard transition-shadow relative overflow-hidden">
           <div class="absolute top-0 left-0 w-full h-2 bg-blue-400"></div>
           <div class="relative z-10 space-y-4">
-            <h3 class="font-pixel text-3xl">Premium</h3>
-            <span class="font-pixel text-6xl text-neutral-900">699€</span>
-            <span class="block font-sans text-neutral-500">/ mois</span>
-            <ul class="space-y-2 text-sm text-neutral-600 font-medium text-left">
-              <li>- 10 postes de travail</li>
-              <li>- Intervention sur site</li>
-              <li>- Supervision réseau</li>
-            </ul>
-            <button class="px-6 py-3 bg-blue-400 border-2 border-black font-pixel text-xl text-black shadow-hard-sm shadow-hard-hover transition-all duration-200">Choisir</button>
+            <h3 class="font-pixel text-2xl">Puissance</h3>
+            <span class="font-pixel text-5xl text-neutral-900">149€</span>
+            <span class="block font-sans text-neutral-500">/ mois HT</span>
+            <p class="text-sm text-neutral-600 font-medium text-left">+3 appels/mois, 3h sur site à Monaco et PACA.</p>
+            <a href="mailto:bonjour@bugzero.fr" class="inline-block px-4 py-2 bg-blue-400 border-2 border-black font-pixel text-lg text-black shadow-hard-sm shadow-hard-hover transition-all duration-200">Choisir</a>
           </div>
         </div>
-        <!-- Formule 4 : 1299€ -->
+        <!-- Illimitée : 249€ -->
         <div class="bg-purple-50 border-2 border-purple-400 p-8 flex flex-col items-center text-center shadow-hard-sm hover:shadow-hard transition-shadow relative overflow-hidden">
           <div class="absolute top-0 left-0 w-full h-2 bg-purple-400"></div>
           <div class="relative z-10 space-y-4">
-            <h3 class="font-pixel text-3xl">Enterprise</h3>
-            <span class="font-pixel text-6xl text-neutral-900">1299€</span>
-            <span class="block font-sans text-neutral-500">/ mois</span>
-            <ul class="space-y-2 text-sm text-neutral-600 font-medium text-left">
-              <li>- Postes illimités</li>
-              <li>- Intervention prioritaire</li>
-              <li>- Infrastructure complète</li>
-            </ul>
-            <button class="px-6 py-3 bg-purple-400 border-2 border-black font-pixel text-xl text-black shadow-hard-sm shadow-hard-hover transition-all duration-200">Choisir</button>
+            <h3 class="font-pixel text-2xl">Illimitée</h3>
+            <span class="font-pixel text-5xl text-neutral-900">249€</span>
+            <span class="block font-sans text-neutral-500">/ mois HT</span>
+            <p class="text-sm text-neutral-600 font-medium text-left">Appels illimités, 1 journée sur site par mois.</p>
+            <a href="mailto:bonjour@bugzero.fr" class="inline-block px-4 py-2 bg-purple-400 border-2 border-black font-pixel text-lg text-black shadow-hard-sm shadow-hard-hover transition-all duration-200">Choisir</a>
           </div>
         </div>
       </div>
@@ -122,20 +106,21 @@ import ButtonOffset from '../../components/ButtonOffset.astro';
       <div class="grid lg:grid-cols-12 gap-12">
         <div class="lg:col-span-4">
           <div class="lg:sticky lg:top-32">
-            <h2 class="font-pixel text-6xl tracking-tight mb-6">SÉCURISITE_WP_PRO</h2>
+            <h2 class="font-pixel text-5xl lg:text-6xl tracking-tight mb-6">SÉCURISITE_WP_PRO</h2>
             <div class="w-20 h-2 bg-neutral-900 mb-6"></div>
-            <p class="text-xl text-neutral-500 font-medium">Protection complète pour votre site WordPress.</p>
+            <p class="text-xl text-neutral-500 font-medium">Votre site WordPress inviolable.</p>
           </div>
         </div>
         <div class="lg:col-span-8 space-y-6">
           <div class="bg-white p-8 border-2 border-neutral-100 shadow-sm">
-            <h3 class="font-pixel text-4xl text-green-600 mb-2">99€ / mois</h3>
-            <p class="text-lg text-neutral-600 leading-relaxed">SécuriSite WP Pro est notre solution tout-en-un pour sécuriser, maintenir et optimiser votre site WordPress. Mises à jour automatiques, sauvegardes quotidiennes, surveillance 24/7 et assistance prioritaire.</p>
+            <h3 class="font-pixel text-4xl text-green-600 mb-2">99€ HT / mois</h3>
+            <p class="text-lg text-neutral-600 leading-relaxed">Mises à jour, sécurité, sauvegardes quotidiennes. Garantie anti-piratage.</p>
             <ul class="space-y-2 mt-6 text-neutral-600 font-medium">
               <li class="flex items-start gap-3"><div class="w-2 h-2 mt-2.5 bg-green-500 flex-shrink-0"></div>Mises à jour WordPress, thèmes et extensions</li>
               <li class="flex items-start gap-3"><div class="w-2 h-2 mt-2.5 bg-green-500 flex-shrink-0"></div>Sauvegarde quotidienne cloud</li>
-              <li class="flex items-start gap-3"><div class="w-2 h-2 mt-2.5 bg-green-500 flex-shrink-0"></div>Analyse de sécurité hebdomadaire</li>
+              <li class="flex items-start gap-3"><div class="w-2 h-2 mt-2.5 bg-green-500 flex-shrink-0"></div>Surveillance de sécurité 24/7</li>
             </ul>
+            <a href="mailto:bonjour@bugzero.fr" class="inline-block mt-6 px-6 py-3 bg-green-500 border-2 border-black font-pixel text-xl text-white shadow-hard shadow-hard-hover transition-all duration-200">Je sécurise mon site</a>
           </div>
         </div>
       </div>
@@ -148,23 +133,16 @@ import ButtonOffset from '../../components/ButtonOffset.astro';
       <div class="grid lg:grid-cols-12 gap-12">
         <div class="lg:col-span-4">
           <div class="lg:sticky lg:top-32">
-            <h2 class="font-pixel text-6xl tracking-tight mb-6">CYBERSÉCURITÉ</h2>
+            <h2 class="font-pixel text-5xl lg:text-6xl tracking-tight mb-6">CYBERSÉCURITÉ</h2>
             <div class="w-20 h-2 bg-neutral-900 mb-6"></div>
-            <p class="text-xl text-neutral-500 font-medium">Protégez votre entreprise des menaces numériques.</p>
+            <p class="text-xl text-neutral-500 font-medium">Protégez votre entreprise des menaces.</p>
           </div>
         </div>
         <div class="lg:col-span-8 space-y-6">
           <div class="bg-white p-8 border-2 border-neutral-100 shadow-sm">
-            <h3 class="font-sans text-2xl font-semibold mb-4">Test d'intrusion</h3>
-            <p class="text-lg text-neutral-600">Audit complet de votre infrastructure pour identifier les failles de sécurité avant les attaquants. Rapport détaillé et préconisations.</p>
-          </div>
-          <div class="bg-white p-8 border-2 border-neutral-100 shadow-sm">
-            <h3 class="font-sans text-2xl font-semibold mb-4">Bitdefender GravityZone</h3>
-            <p class="text-lg text-neutral-600">Solution antivirus nouvelle génération pour entreprises. Protection multi-niveaux avec gestion centralisée et rapports de conformité.</p>
-          </div>
-          <div class="bg-white p-8 border-2 border-neutral-100 shadow-sm">
-            <h3 class="font-sans text-2xl font-semibold mb-4">Conformité RGPD & NIS2</h3>
-            <p class="text-lg text-neutral-600">Accompagnement pour la mise en conformité de votre système d'information avec les réglementations européennes.</p>
+            <h3 class="font-pixel text-4xl text-red-600 mb-2">Test d'intrusion dès 500€ HT</h3>
+            <p class="text-lg text-neutral-600 leading-relaxed mb-6">Rapport complet, conformité RGPD/NIS2.</p>
+            <a href="/professionnel/audit-securite" class="inline-block px-6 py-3 bg-red-500 border-2 border-black font-pixel text-xl text-white shadow-hard shadow-hard-hover transition-all duration-200">Découvrir l'audit</a>
           </div>
         </div>
       </div>
@@ -177,95 +155,51 @@ import ButtonOffset from '../../components/ButtonOffset.astro';
       <div class="grid lg:grid-cols-12 gap-12">
         <div class="lg:col-span-4">
           <div class="lg:sticky lg:top-32">
-            <h2 class="font-pixel text-6xl tracking-tight mb-6">VISIBILITÉ_WEB</h2>
+            <h2 class="font-pixel text-5xl lg:text-6xl tracking-tight mb-6">VISIBILITÉ_WEB</h2>
             <div class="w-20 h-2 bg-neutral-900 mb-6"></div>
             <p class="text-xl text-neutral-500 font-medium">Faites décoller votre présence en ligne.</p>
           </div>
         </div>
         <div class="lg:col-span-8 space-y-6">
           <div class="bg-white p-8 border-2 border-neutral-100 shadow-sm">
-            <h3 class="font-sans text-2xl font-semibold mb-4">Création de site internet</h3>
-            <p class="text-lg text-neutral-600">Sites vitrine, e-commerce ou sur mesure. Design responsive, optimisé SEO et hébergé en France.</p>
-          </div>
-          <div class="bg-white p-8 border-2 border-neutral-100 shadow-sm">
-            <h3 class="font-sans text-2xl font-semibold mb-4">Référencement SEO & SEA</h3>
-            <p class="text-lg text-neutral-600">Optimisation de votre site pour les moteurs de recherche et campagnes Google Ads pour générer du trafic qualifié.</p>
-          </div>
-          <div class="bg-white p-8 border-2 border-neutral-100 shadow-sm">
-            <h3 class="font-sans text-2xl font-semibold mb-4">Fonds Bleu 30-70%</h3>
-            <p class="text-lg text-neutral-600">Bénéficiez d'une aide du Fonds Bleu pour financer votre transformation numérique. Prise en charge de 30% à 70% selon votre éligibilité.</p>
+            <h3 class="font-sans text-2xl font-semibold mb-4">Création sur mesure & SEO</h3>
+            <p class="text-lg text-neutral-600 leading-relaxed mb-2">Création sur mesure, référencement SEO, Google Ads.</p>
+            <p class="text-lg text-neutral-600 leading-relaxed mb-4"><strong class="text-neutral-900 font-semibold">Fonds Bleu (30-70% pour Monaco).</strong> 2 mois de maintenance offerts.</p>
+            <a href="/professionnel/creation-site" class="inline-block px-6 py-3 bg-cyan-500 border-2 border-black font-pixel text-xl text-white shadow-hard shadow-hard-hover transition-all duration-200">Démarrer mon projet</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 6. Pack Infogérance -->
+  <!-- 6. Infogérance -->
   <section class="relative py-24 border-t-2 border-neutral-100 bg-white/50 backdrop-blur-sm z-10">
-    <div class="max-w-7xl mx-auto px-6">
-      <h2 class="font-pixel text-6xl tracking-tight mb-16 text-center">PACK_INFOGÉRANCE</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="group bg-blue-500 border-2 border-black p-8 flex flex-col items-center justify-center gap-4 text-center shadow-hard-sm hover:shadow-hard hover:-translate-y-1 transition-all duration-300">
-          <div class="p-4 border-2 border-white text-white rounded-none">
-            <i data-lucide="settings" class="w-8 h-8"></i>
-          </div>
-          <h3 class="font-pixel text-2xl text-white">Installation & Configuration</h3>
-        </div>
-        <div class="group bg-green-500 border-2 border-black p-8 flex flex-col items-center justify-center gap-4 text-center shadow-hard-sm hover:shadow-hard hover:-translate-y-1 transition-all duration-300">
-          <div class="p-4 border-2 border-white text-white rounded-none">
-            <i data-lucide="headset" class="w-8 h-8"></i>
-          </div>
-          <h3 class="font-pixel text-2xl text-white">Assistance prioritaire</h3>
-        </div>
-        <div class="group bg-purple-500 border-2 border-black p-8 flex flex-col items-center justify-center gap-4 text-center shadow-hard-sm hover:shadow-hard hover:-translate-y-1 transition-all duration-300">
-          <div class="p-4 border-2 border-white text-white rounded-none">
-            <i data-lucide="cloud" class="w-8 h-8"></i>
-          </div>
-          <h3 class="font-pixel text-2xl text-white">HelpBackup Cloud</h3>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 7. À propos / Équipe -->
-  <section class="relative py-24 bg-neutral-50/90 border-t-2 border-neutral-200 z-10">
     <div class="max-w-7xl mx-auto px-6">
       <div class="grid lg:grid-cols-12 gap-12">
         <div class="lg:col-span-4">
           <div class="lg:sticky lg:top-32">
-            <h2 class="font-pixel text-6xl tracking-tight mb-6">NOTRE_ÉQUIPE</h2>
+            <h2 class="font-pixel text-5xl lg:text-6xl tracking-tight mb-6">INFOGÉRANCE</h2>
             <div class="w-20 h-2 bg-neutral-900 mb-6"></div>
-            <p class="text-xl text-neutral-500 font-medium">Des experts passionnés à votre service.</p>
+            <p class="text-xl text-neutral-500 font-medium">Toute votre informatique externalisée.</p>
           </div>
         </div>
         <div class="lg:col-span-8 space-y-6">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="bg-white p-6 border-2 border-neutral-100 shadow-sm text-center">
-              <i data-lucide="user" class="w-12 h-12 mx-auto mb-3 text-blue-500"></i>
-              <h3 class="font-pixel text-2xl">Johan</h3>
-              <p class="text-neutral-600">Fondateur & expert technique</p>
-            </div>
-            <div class="bg-white p-6 border-2 border-neutral-100 shadow-sm text-center">
-              <i data-lucide="user" class="w-12 h-12 mx-auto mb-3 text-green-500"></i>
-              <h3 class="font-pixel text-2xl">Paul</h3>
-              <p class="text-neutral-600">Ingénieur cybersécurité</p>
-            </div>
-            <div class="bg-white p-6 border-2 border-neutral-100 shadow-sm text-center">
-              <i data-lucide="user" class="w-12 h-12 mx-auto mb-3 text-purple-500"></i>
-              <h3 class="font-pixel text-2xl">Alex</h3>
-              <p class="text-neutral-600">Développeur web & intégrateur</p>
-            </div>
-            <div class="bg-white p-6 border-2 border-neutral-100 shadow-sm text-center">
-              <i data-lucide="user" class="w-12 h-12 mx-auto mb-3 text-pink-500"></i>
-              <h3 class="font-pixel text-2xl">Camelia</h3>
-              <p class="text-neutral-600">Support client & relation</p>
-            </div>
-          </div>
           <div class="bg-white p-8 border-2 border-neutral-100 shadow-sm">
-            <h3 class="font-sans text-2xl font-semibold mb-4">Partenaires</h3>
-            <p class="text-lg text-neutral-600">Nous collaborons avec des partenaires de confiance pour étendre notre expertise : Bitdefender, Microsoft, Google, et des intégrateurs locaux à Monaco et Nice.</p>
+            <p class="text-lg text-neutral-600 leading-relaxed mb-6">Installation, gestion, sécurité, dépannage. Un interlocuteur unique pour toute votre infrastructure.</p>
+            <a href="/professionnel/infogerance" class="inline-block px-6 py-3 bg-purple-500 border-2 border-black font-pixel text-xl text-white shadow-hard shadow-hard-hover transition-all duration-200">Voir le pack infogérance</a>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Témoignage -->
+  <section class="relative py-20 bg-neutral-50/90 border-t-2 border-neutral-200 z-10">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="bg-yellow-50 border-2 border-yellow-400 p-8 shadow-hard-sm">
+        <i data-lucide="quote" class="w-10 h-10 text-yellow-500 mb-4"></i>
+        <p class="font-sans text-xl text-neutral-800 leading-relaxed italic">« Bugzero gère notre parc info depuis 3 ans, zéro souci. »</p>
+        <p class="font-pixel text-lg text-neutral-900 mt-4">– Cabinet Avocats Associés, Monaco</p>
       </div>
     </div>
   </section>
@@ -273,11 +207,12 @@ import ButtonOffset from '../../components/ButtonOffset.astro';
   <!-- 8. Contact -->
   <section class="relative py-32 px-6 z-10">
     <div class="max-w-3xl mx-auto text-center relative z-10">
-      <h2 class="font-pixel text-5xl lg:text-7xl tracking-tight mb-12 bg-white/50 backdrop-blur-sm p-4 rounded-xl inline-block">CONTACTEZ_NOS_EXPERTS</h2>
+      <h2 class="font-pixel text-4xl lg:text-6xl tracking-tight mb-8 bg-white/50 backdrop-blur-sm p-4 rounded-xl inline-block">VOTRE_DEVIS_PERSONNALISÉ</h2>
+      <p class="text-xl text-neutral-600 mb-12">Parlez-nous de votre projet, on vous répond sous 24h.</p>
       <div class="flex flex-col gap-6 max-w-sm mx-auto">
-        <ButtonOffset href="tel:0678565430" bgColor="bg-red-500" bgDark="bg-red-800" icon="phone" iconClass="fill-current">06 78 56 54 30</ButtonOffset>
-        <ButtonOffset href="mailto:contact@bugzero.com" bgColor="bg-blue-500" bgDark="bg-blue-800" icon="mail" iconClass="fill-current">contact@bugzero.com</ButtonOffset>
-        <ButtonOffset href="#" bgColor="bg-pink-500" bgDark="bg-pink-800" icon="instagram">HBC 33 Rue Grimaldi, Monaco</ButtonOffset>
+        <ButtonOffset href="mailto:bonjour@bugzero.fr" bgColor="bg-blue-500" bgDark="bg-blue-800" icon="mail" iconClass="fill-current">Demander mon devis personnalisé</ButtonOffset>
+        <ButtonOffset href="tel:+33678565430" bgColor="bg-red-500" bgDark="bg-red-800" icon="phone" iconClass="fill-current">06 78 56 54 30</ButtonOffset>
+        <ButtonOffset href="https://maps.google.com/?q=9+Allée+Lazare+Sauvaigo+98000+Monaco" bgColor="bg-green-500" bgDark="bg-green-800" icon="map-pin">9, Allée Lazare Sauvaigo, Monaco</ButtonOffset>
       </div>
     </div>
   </section>
