@@ -1,0 +1,11 @@
+# Redirections Cloudflare Pages
+/particulier  /particulier/  301
+/professionnel  /professionnel/  301
+/qui-sommes-nous  /qui-sommes-nous/  301
+/professionnel/audit-securite  /professionnel/audit-securite/  301
+/professionnel/maintenance-pro  /professionnel/maintenance-pro/  301
+/professionnel/creation-site  /professionnel/creation-site/  301
+/professionnel/infogerance  /professionnel/infogerance/  301
+/contact  /contact/  301
+/mentions-legales  /mentions-legales/  301
+/confidentialite  /confidentialite/  301
